@@ -88,7 +88,7 @@ def get_html(URL,ASIN):
     chrome_options.add_argument("--headless")
 
     # open web browser
-    driver = webdriver.Chrome('chromedriver.exe', options=chrome_options)
+    driver = webdriver.Chrome('.\chromedriver.exe', options=chrome_options)
     driver.get(URL)
 
     html = driver.page_source
