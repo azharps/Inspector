@@ -9,7 +9,4 @@ PyYAML~=6.0
 pandas~=1.4.3
 numpy~=1.23.2
 webdriver_manager
-libglib2.0-0
 libnss3
-libgconf-2-4
-libfontconfig1
