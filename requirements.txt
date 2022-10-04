@@ -1,0 +1,10 @@
+streamlit_option_menu
+streamlit_authenticator
+selenium~=4.4.3
+xlsxwriter~=3.0.3
+openpyxl~=3.0.10
+
+streamlit~=1.12.2
+PyYAML~=6.0
+pandas~=1.4.3
+numpy~=1.23.2
