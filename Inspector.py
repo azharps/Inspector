@@ -27,6 +27,13 @@ from webdriver_manager.chrome import ChromeDriverManager
 # from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.wait import WebDriverWait
 
+#new code
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from webdriver_manager.firefox import GeckoDriverManager
+
 warnings.filterwarnings('ignore')
 
 st.set_page_config("TITLE TREATMENT INSPECTOR", "📊", initial_sidebar_state="expanded", layout="wide", )
@@ -83,17 +90,22 @@ if not st.session_state:
 
 def get_html(URL,ASIN):
     # navigate webpage
-    chrome_options = Options()
-    chrome_options.add_argument("user-agent=UA")
+#     chrome_options = Options()
+#     chrome_options.add_argument("user-agent=UA")
 
-    # set the browser Headless.
-    chrome_options.add_argument("--headless")
+#     # set the browser Headless.
+#     chrome_options.add_argument("--headless")
 
-    # open web browser
-    service = ChromeService(ChromeDriverManager().install())
+#     # open web browser
+#     service = ChromeService(ChromeDriverManager().install())
 #     driver = webdriver.Chrome(options=chrome_options,service=service)
-    driver = webdriver.Chrome(service=service)
-    driver.get(URL)
+#     driver.get(URL)
+
+       #new code
+    firefoxOptions = Options()
+    firefoxOptions.add_argument("--headless")
+    service = Service(GeckoDriverManager().install())
+    driver = webdriver.Firefox(options=firefoxOptions,service=service)
 
     html = driver.page_source
     driver.quit()
