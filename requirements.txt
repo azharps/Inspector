@@ -8,3 +8,4 @@ streamlit~=1.12.2
 PyYAML~=6.0
 pandas~=1.4.3
 numpy~=1.23.2
+webdriver_manager
