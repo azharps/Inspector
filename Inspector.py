@@ -91,7 +91,8 @@ def get_html(URL,ASIN):
 
     # open web browser
     service = ChromeService(ChromeDriverManager().install())
-    driver = webdriver.Chrome(options=chrome_options,service=service)
+#     driver = webdriver.Chrome(options=chrome_options,service=service)
+    driver = webdriver.Chrome(service=service)
     driver.get(URL)
 
     html = driver.page_source
